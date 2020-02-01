@@ -1,41 +1,40 @@
 <template>
-  <div class="hello">
-    <div id="body">
-      <p
-        id="desc"
-      >Usecase helps you make better choices by getting a direct peep into other people's Usecases can help influence your descisions.</p>
-    </div>
+  <div>
+    <Banner />
+    <div class="hello">
+      <div id="body">
+        <p
+          id="desc"
+        >Usecase helps you make better choices by getting a direct peep into other people's Usecases can help influence your descisions.</p>
+      </div>
 
-    <div>
-      <Uses />
-      <Record />
+      <div>
+        <Uses />
+        <Record />
 
-      <Recent />
+        <Recent />
 
-      <Document />
-      <Publish />
+        <Document />
+        <Publish />
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-import Recent from "./recent";
-import Uses from "./uses";
-import Document from "./document";
-import Publish from "./publish";
-import Record from "./record";
+import Recent from './recent'
+import Uses from './uses'
+import Document from './document'
+import Publish from './publish'
+import Record from './record'
+
+import Banner from '../../components/banner'
 
 export default {
-  name: "Home",
+  name: 'Home',
 
-  components: {
-    Recent,
-    Record,
-    Publish,
-    Document,
-    Uses
-  }
-};
+  components: { Banner, Recent, Record, Publish, Document, Uses }
+}
 </script>
 
 <style scoped>

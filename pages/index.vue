@@ -1,39 +1,38 @@
 <template>
-  <div class="container">
+  <div>
+    <Header />
     <div>
-      <logo />
-      <h1 class="title">
-        brand
-      </h1>
-      <h2 class="subtitle">
-        brand page for usecases
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
+      <Home />
     </div>
+    <Footer />
   </div>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
+import Vue from 'vue'
+import VueMq from "vue-mq";
+import { BootstrapVueIcons } from 'bootstrap-vue'
+
+import 'bootstrap-vue/dist/bootstrap-vue-icons.min.css'
+import Home from './home/home.vue'
+import Header from '../components/header.vue'
+import Footer from '../components/footer.vue'
+
+Vue.use(VueMq, {
+  breakpoints: {
+    mobile: 450,
+    tablet: 1100,
+    laptop: 1700,
+    desktop: Infinity
+  }
+});
+
 
 export default {
   components: {
-    Logo
+    Home,
+    Header,
+    Footer
   }
 }
 </script>
