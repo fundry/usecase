@@ -10,7 +10,7 @@
 
 <script>
 import Vue from 'vue'
-import VueMq from "vue-mq";
+import VueMq from 'vue-mq'
 import { BootstrapVueIcons } from 'bootstrap-vue'
 
 import 'bootstrap-vue/dist/bootstrap-vue-icons.min.css'
@@ -25,10 +25,33 @@ Vue.use(VueMq, {
     laptop: 1700,
     desktop: Infinity
   }
-});
-
+})
 
 export default {
+  head() {
+    return {
+      title: 'Home',
+      script: [
+        { src: '//unpkg.com/vue@latest/dist/vue.min.js' },
+        { src: '//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.js' },
+        {
+          src:
+            '//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue-icons.min.js'
+        }
+      ],
+      link: [
+        {
+          rel: 'text/css',
+          href: '//unpkg.com/bootstrap/dist/css/bootstrap.min.css'
+        },
+        {
+          rel: 'text/css',
+          href: '//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.css'
+        }
+      ]
+    }
+  },
+
   components: {
     Home,
     Header,
@@ -38,6 +61,13 @@ export default {
 </script>
 
 <style>
+#icon {
+  width: 30px;
+  height: 30px;
+  color: #000;
+  padding-top: 2px;
+}
+
 .container {
   margin: 0 auto;
   min-height: 100vh;

@@ -23,22 +23,23 @@
     </ul>
 
     <div v-if="$mq === 'mobile'">
-      <p>Menu</p>
+      <BIconList font-scale="2" id="icon" />
     </div>
   </div>
 </template>
 
 <script lang="ts" >
-import Vue from "vue";
+import { BIconList } from 'bootstrap-vue'
 
 export default {
-  name: "Header"
-};
+  name: 'Header',
+  components: { BIconList }
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-input[type="text"] {
+input[type='text'] {
   padding: 0.3em;
   border: none;
   background: transparent;

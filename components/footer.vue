@@ -13,9 +13,9 @@
           </h3>
 
           <div id="media-icons">
-            <p>IN</p>
-            <p>TW</p>
-            <p>Git</p>
+            <BIconWallet id="icon" />
+            <BIconWallet id="icon" />
+            <BIconWallet id="icon" />
           </div>
         </div>
         <div>
@@ -61,9 +61,9 @@
           </h3>
 
           <div id="media-icons">
-            <p>IN</p>
-            <p>TW</p>
-            <p>Git</p>
+            <BIconWallet id="icon" />
+            <BIconWallet id="icon" />
+            <BIconWallet id="icon" />
           </div>
         </div>
         <div>
@@ -109,9 +109,9 @@
           </h3>
 
           <div id="media-icons-mobile">
-            <p>IN</p>
-            <p>TW</p>
-            <p>Git</p>
+            <BIconWallet id="icon" />
+            <BIconWallet id="icon" />
+            <BIconWallet id="icon" />
           </div>
         </div>
 
@@ -149,9 +149,14 @@
 </template>
 
 <script>
+import { BIconWallet } from 'bootstrap-vue'
+
 export default {
-  name: "Footer"
-};
+  name: 'Footer',
+  components: {
+    BIconWallet
+  }
+}
 </script>
 
 <style scoped lang="postcss" >

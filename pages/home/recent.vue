@@ -4,17 +4,19 @@
       <h5>Recently Featured Cases</h5>
 
       <div id="input-box" v-if="$mq === 'tablet'">
-        <v-icon name="regular/heart" id="icon" scale="2" />
+        <BIconSearch id="icon" />
+
         <input type="text" placeholder="Search Case" />
       </div>
 
       <div id="input-box" v-else-if="$mq === 'laptop'">
-        <v-icon name="regular/heart" id="icon" scale="2" />
+        <BIconSearch id="icon" />
+
         <input type="text" placeholder="Search Case" />
       </div>
 
       <div v-else-if="$mq === 'mobile'">
-        <v-icon name="regular/heart" sclae="2" />
+        <BIconSearch id="icon" />
       </div>
     </div>
 
@@ -26,9 +28,9 @@
         <h6 id="title">{{d.Title}}</h6>
 
         <div id="stats">
-          <h6 id="ico">SS</h6>
-          <h6 id="ico">VV</h6>
-          <h6 id="ico">RR</h6>
+          <BIconBook id="icon" />
+          <BIconEye id="icon" />
+          <BIconBook id="icon" />
         </div>
       </div>
     </div>
@@ -36,46 +38,44 @@
 </template>
 
 <script lang="ts" >
-import Vue from "vue";
-import Icon from "vue-awesome/components/Icon.vue";
+import Vue from 'vue'
+import { BIconSearch, BIconBook, BIconEye } from 'bootstrap-vue'
 
 export default {
-  name: "Home",
+  name: 'Home',
   components: {
-    "v-icon": Icon
+    BIconSearch,
+    BIconBook,
+    BIconEye
   },
   data: () => {
     return {
-      txt: "Testing",
+      txt: 'Testing',
       data: [
         {
           key: 1,
-          name: "FlutterWave",
-          Title: "Adopting Hasura Graphql Engine"
+          name: 'FlutterWave',
+          Title: 'Adopting Hasura Graphql Engine'
         },
         {
           key: 2,
-          name: "Andela",
-          Title: "Adopting Hasura Graphql Engine"
+          name: 'Andela',
+          Title: 'Adopting Hasura Graphql Engine'
         },
-        { key: 3, name: "Facebook", Title: "Adopting Hasura Graphql Engine" },
-        { key: 3, name: "Medium", Title: "Google Kubernettes Engine" }
+        { key: 3, name: 'Facebook', Title: 'Adopting Hasura Graphql Engine' },
+        { key: 3, name: 'Medium', Title: 'Google Kubernettes Engine' }
       ]
-    };
+    }
   }
-};
+}
 </script>
 
 <style scoped>
-#ico {
-  margin: 0.1em 0.5em;
-}
-
 #input-box {
   border: 1px solid black;
   border-radius: 10px;
   padding: 0.3em;
-  width: 24em;
+  width: 25em;
   height: auto;
 }
 
@@ -92,8 +92,6 @@ h5 {
   cursor: pointer;
   font-weight: bold;
   font-size: 1.3em;
-}
-#icon {
 }
 #head {
   display: flex;
@@ -118,9 +116,10 @@ h5 {
 
 #stats {
   display: flex;
+  justify-content: space-evenly;
 }
 
-input[type="text"] {
+input[type='text'] {
   padding: 0.5em;
   border: none;
   background: transparent;

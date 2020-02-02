@@ -1,6 +1,6 @@
 <template >
   <div id="body">
-    <h3>Usecases For Everyone</h3>
+    <h3>Engineering Demystified</h3>
 
     <p>Everyone can create a Case then make multiple usecase to record the descions made within a Case.</p>
 
@@ -14,8 +14,8 @@
 
 <script>
 export default {
-  name: "Uses"
-};
+  name: 'Uses'
+}
 </script>
 
 
