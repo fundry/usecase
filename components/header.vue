@@ -12,7 +12,9 @@
       <router-link to="/create" id="link">Cases</router-link>
       <router-link to="/login" id="link">Login</router-link>
 
+<nuxt-link to="/documentation" >
       <button v-on="hi">Create Account</button>
+    </nuxt-link>
     </ul>
 
     <ul v-if="$mq === 'laptop'">
