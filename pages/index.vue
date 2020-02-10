@@ -18,7 +18,6 @@ import 'bootstrap-vue/dist/bootstrap-vue-icons.min.css'
 import Home from './home/home.vue'
 import Header from '../components/header.vue'
 import Footer from '../components/footer.vue'
-import Client  from '../data/config'
 
 Vue.use(VueMq, {
   breakpoints: {
@@ -27,12 +26,6 @@ Vue.use(VueMq, {
     laptop: 1700,
     desktop: Infinity
   }
-})
-
-Vue.Use(VueApollo)
-
-const apolloProvider = new VueApollo({
-  defaultClient: Client,
 })
 
 export default {

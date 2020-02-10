@@ -7,7 +7,6 @@
           id="desc"
         >Usecase helps you make better choices by getting a direct peep into other people's Usecases can help influence your descisions.</p>
       </div>
-
       <div>
         <Uses />
         <Record />
