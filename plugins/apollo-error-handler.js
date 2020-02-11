@@ -1,4 +1,3 @@
 export default (error, nuxtContext) => {
-  console.log('Global error handler');
-  console.error(error);
+  console.log(error, 'Global error handler');
 };

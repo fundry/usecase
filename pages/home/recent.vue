@@ -21,11 +21,11 @@
     </div>
 
     <!-- mapping in Vuejs -->
-    <div v-bind:key="d.id" v-for="d in data">
+    <div v-bind:key="C.id" v-for="C in Cases">
       <div id="box">
-        <h6 id="org">{{d.name}}</h6>
+        <h6 id="org">{{C.author}}</h6>
 
-        <h6 id="title">{{d.Title}}</h6>
+        <h6 id="title">{{C.title}}</h6>
 
         <div id="stats">
           <BIconBook id="icon" />
@@ -40,32 +40,54 @@
 <script lang="ts" >
 import Vue from 'vue'
 import { BIconSearch, BIconBook, BIconEye } from 'bootstrap-vue'
+import { gql } from 'apollo-boost'
+
+const Test = gql`
+  query Cases {
+    Cases {
+      id
+      created
+      author
+      title
+    }
+  }
+`
+
+new Vue({
+  apollo: {
+    Cases: {
+      prefetch: true,
+      query: Test
+    }
+  }
+})
 
 export default {
   name: 'Home',
-  components: {
-    BIconSearch,
-    BIconBook,
-    BIconEye
-  },
   data: () => {
     return {
       txt: 'Testing',
+      Cases: {},
       data: [
         {
           key: 1,
           name: 'FlutterWave',
           Title: 'Adopting Hasura Graphql Engine'
-        },
-        {
-          key: 2,
-          name: 'Andela',
-          Title: 'Adopting Hasura Graphql Engine'
-        },
-        { key: 3, name: 'Facebook', Title: 'Adopting Hasura Graphql Engine' },
-        { key: 3, name: 'Medium', Title: 'Google Kubernettes Engine' }
+        }
       ]
     }
+  },
+
+  apollo: {
+    Cases: {
+      query: Test
+    }
+  },
+
+  components: {
+    BIconSearch,
+    BIconBook,
+    BIconEye
   }
 }
 </script>

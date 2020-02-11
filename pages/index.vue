@@ -28,6 +28,10 @@ Vue.use(VueMq, {
   }
 })
 
+new Vue({
+  VueApollo
+})
+
 export default {
   head() {
     return {

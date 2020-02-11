@@ -54,13 +54,8 @@ export default {
     extend(config, ctx) {},
   },
   apollo: {
-    tokenName: 'yourApolloTokenName', // optional, default: apollo-token
+    // tokenName: 'yourApolloTokenName', // optional, default: apollo-token
     cookieAttributes: {
-      /**
-        * Define when the cookie will be removed. Value can be a Number
-        * which will be interpreted as days from time of creation or a
-        * Date instance. If omitted, the cookie becomes a session cookie.
-        */
       expires: 7, // optional, default: 7 (days)
 
       /**
@@ -88,25 +83,22 @@ export default {
         fetchPolicy: 'cache-and-network',
       },
     },
-    // optional
     watchLoading: '~/plugins/apollo-watch-loading-handler.js',
-    // optional
     errorHandler: '~/plugins/apollo-error-handler.js',
     // required
     clientConfigs: {
       default: {
         // required
-        httpEndpoint: 'http://localhost:8080',
+        httpEndpoint: 'http://127.0.0.1:8080/v1/graphql',
         // override HTTP endpoint in browser only
-        browserHttpEndpoint: '/console#/l',
+        // browserHttpEndpoint: '/console',
         // optional
         // See https://www.apollographql.com/docs/link/links/http.html#options
         httpLinkOptions: {
           credentials: 'same-origin',
         },
-        // You can use `wss` for secure connection (recommended in production)
         // Use `null` to disable subscriptions
-        wsEndpoint: 'ws://localhost:8080', // optional
+        wsEndpoint: null, // optional
         // LocalStorage token
         tokenName: 'apollo-token', // optional
         // Enable Automatic Query persisting with Apollo Engine
@@ -116,8 +108,8 @@ export default {
         websocketsOnly: false, // Optional
       },
       test: {
-        httpEndpoint: 'http://localhost:8080/console#/',
-        wsEndpoint: 'ws://localhost:8080/console#/',
+        httpEndpoint: 'http://127.0.0.1:8080/v1/graphql',
+        wsEndpoint: null,
         tokenName: 'apollo-token',
       },
       // alternative: user path to config which returns exact same config options
