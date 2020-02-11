@@ -28,10 +28,6 @@ Vue.use(VueMq, {
   }
 })
 
-new Vue({
-  VueApollo
-})
-
 export default {
   head() {
     return {
@@ -71,6 +67,10 @@ export default {
   height: 30px;
   color: #000;
   padding-top: 2px;
+}
+
+#flex {
+  display: flex;
 }
 
 .container {

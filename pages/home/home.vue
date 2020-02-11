@@ -44,7 +44,7 @@ export default {
 #desc {
   padding: 1em;
   text-align: center;
-  font-size: 1.4em;
+  font-size: 1.4rem;
 }
 
 a {
