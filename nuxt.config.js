@@ -1,8 +1,5 @@
-require("dotenv").config({
-  path: `.env.${process.env.NODE_ENV}`,
-})
-
-console.log(process.env.GRAPHQL_URL)
+const URL = process.env.GRAPHQL_URL
+console.log(URL)
 
 export default {
   mode: 'universal',
@@ -49,10 +46,7 @@ export default {
     '@nuxtjs/dotenv',
     '@nuxtjs/apollo',
   ],
-
-  /*
-  ** Build configuration
-  */
+ 
   build: {
     /*
     ** You can extend webpack config here
@@ -95,7 +89,7 @@ export default {
     clientConfigs: {
       default: {
         // required
-        httpEndpoint: process.env.GRAPHQL_URL,
+        httpEndpoint: URL,
         // override HTTP endpoint in browser only
         // browserHttpEndpoint: '/console',
         // optional
