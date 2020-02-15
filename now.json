@@ -1,5 +1,7 @@
 {
-	"env" : {
-		"GRAPHQL_URL" : "@graphql_url"
+	"build": {
+		"env": {
+			"GRAPHQL_URL": "@graphql_url"
+		}
 	}
 }
