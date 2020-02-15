@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 export default {
   mode: 'universal',
   /*
@@ -89,7 +93,7 @@ export default {
     clientConfigs: {
       default: {
         // required
-        httpEndpoint: 'http://127.0.0.1:8080/v1/graphql',
+        httpEndpoint: process.env.GRAPHQL_URL,
         // override HTTP endpoint in browser only
         // browserHttpEndpoint: '/console',
         // optional
