@@ -21,11 +21,11 @@
     </div>
 
     <!-- mapping in Vuejs -->
-    <div v-bind:key="C.id" v-for="C in Cases">
+    <div v-bind:key="U.id" v-for="U in Usecases">
       <div id="box">
-        <h6 id="org">{{C.author}}</h6>
+        <h6 id="org">{{U.author}}</h6>
 
-        <h6 id="title">{{C.title}}</h6>
+        <h6 id="title">{{U.title}}</h6>
 
         <div id="stats">
           <BIconBook id="icon" />
@@ -41,23 +41,13 @@
 import Vue from 'vue'
 import { BIconSearch, BIconBook, BIconEye } from 'bootstrap-vue'
 import { gql } from 'apollo-boost'
-
-const Test = gql`
-  query Cases {
-    Cases {
-      id
-      created
-      author
-      title
-    }
-  }
-`
+import { ALL_USECASES } from '../../data/queries'
 
 new Vue({
   apollo: {
-    Cases: {
+    Usecases: {
       prefetch: true,
-      query: Test
+      query: ALL_USECASES
     }
   }
 })
@@ -67,7 +57,7 @@ export default {
   data: () => {
     return {
       txt: 'Testing',
-      Cases: {},
+      Usecases: {},
       data: [
         {
           key: 1,
@@ -79,8 +69,8 @@ export default {
   },
 
   apollo: {
-    Cases: {
-      query: Test
+    Usecases: {
+      query: ALL_USECASES
     }
   },
 

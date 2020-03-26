@@ -1,7 +1,9 @@
 <template>
   <div class="body" id="contain">
     <div id="flex">
-      <h3 id="title">Usecase</h3>
+      <h3 id="title">
+        <nuxt-link to="/">Usecase</nuxt-link>
+      </h3>
 
       <div id="input-box" v-if="$mq === 'laptop'">
         <input type="text" placeholder="Search Case" />
@@ -9,9 +11,10 @@
     </div>
 
     <ul v-if="$mq === 'tablet'">
-      <router-link to="/create" id="link">Cases</router-link>
-      <router-link to="/login" id="link">Login</router-link>
+      <BIconSearch id="icon" />
 
+      <router-link to="/usecases/cases" id="link">Cases</router-link>
+      <router-link to="/login" id="link">Login</router-link>
       <nuxt-link to="/documentation">
         <button v-on="hi">Create Account</button>
       </nuxt-link>
@@ -31,16 +34,20 @@
 </template>
 
 <script lang="ts" >
-import { BIconList } from 'bootstrap-vue'
+import { BIconList, BIconSearch } from 'bootstrap-vue'
 
 export default {
   name: 'Header',
-  components: { BIconList }
+  components: { BIconList, BIconSearch }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+#icon {
+  padding-top: 10px;
+  font-size: 2.1rem;
+}
+
 input[type='text'] {
   padding: 0.3em;
   border: none;
@@ -98,6 +105,6 @@ li {
 }
 #link {
   color: #42b983;
-  margin-left: 20px;
+  margin-left: 15px;
 }
 </style>

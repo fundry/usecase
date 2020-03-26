@@ -1,5 +1,5 @@
-const URL = process.env.GRAPHQL_URL
-console.log(URL)
+const URL = process.env.GRAPHQL_URL;
+console.log(URL, 'url');
 
 export default {
   mode: 'universal',
@@ -46,7 +46,7 @@ export default {
     '@nuxtjs/dotenv',
     '@nuxtjs/apollo',
   ],
- 
+
   build: {
     /*
     ** You can extend webpack config here
@@ -89,7 +89,7 @@ export default {
     clientConfigs: {
       default: {
         // required
-        httpEndpoint: URL,
+        httpEndpoint: 'http://localhost:8080/v1/graphql',
         // override HTTP endpoint in browser only
         // browserHttpEndpoint: '/console',
         // optional

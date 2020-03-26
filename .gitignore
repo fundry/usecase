@@ -90,3 +90,6 @@ sw.*
 *.swp
 
 .env
+
+nuxt.config.js
+nuxt.config.js

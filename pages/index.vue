@@ -63,14 +63,17 @@ export default {
 
 <style>
 #icon {
-  width: 30px;
-  height: 30px;
+  font-size: 1.7rem;
   color: #000;
   padding-top: 2px;
 }
 
 #flex {
   display: flex;
+}
+
+.body {
+  padding: 1rem;
 }
 
 .container {
