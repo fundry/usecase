@@ -5,102 +5,6 @@
       <button>Document With UseCase</button>
     </div>
 
-    <footer id="footer" v-if="$mq === 'laptop'">
-      <div id="foot">
-        <div>
-          <h3 id="brand">
-            <a href="/">Usecase.io</a>
-          </h3>
-
-          <div id="media-icons">
-            <BIconWallet id="icon" />
-            <BIconWallet id="icon" />
-            <BIconWallet id="icon" />
-          </div>
-        </div>
-        <div>
-          <div id="column">
-            <h5 id="title">PRODUCT</h5>
-
-            <a>Resources</a>
-          </div>
-        </div>
-
-        <div>
-          <div id="column">
-            <h5 id="title">ABOUT</h5>
-            <div>
-              <a>Resources</a>
-            </div>
-          </div>
-        </div>
-
-        <div>
-          <div id="column">
-            <h5 id="title">ABOUT</h5>
-            <div>
-              <a>Resources</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div id="bottom">
-        <p>
-          Copyright @2020 ,
-          All rights reserved.
-        </p>
-      </div>
-    </footer>
-
-    <footer id="footer" v-if="$mq === 'tablet'">
-      <div id="foot">
-        <div>
-          <h3 id="brand">
-            <a href="/">Usecase.io</a>
-          </h3>
-
-          <div id="media-icons">
-            <BIconWallet id="icon" />
-            <BIconWallet id="icon" />
-            <BIconWallet id="icon" />
-          </div>
-        </div>
-        <div>
-          <div id="column">
-            <h5 id="title">PRODUCT</h5>
-
-            <a>Resources</a>
-          </div>
-        </div>
-
-        <div>
-          <div id="column">
-            <h5 id="title">ABOUT</h5>
-            <div>
-              <a>Resources</a>
-            </div>
-          </div>
-        </div>
-
-        <div>
-          <div id="column">
-            <h5 id="title">ABOUT</h5>
-            <div>
-              <a>Resources</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div id="bottom">
-        <p>
-          Copyright @2020 ,
-          All rights reserved.
-        </p>
-      </div>
-    </footer>
-
     <footer id="footer" v-if="$mq === 'mobile'">
       <div id="foot-mobile">
         <div id="brand-mobile">
@@ -131,6 +35,54 @@
 
           <div id="column">
             <h5 id="title-mobile">ABOUT</h5>
+            <div>
+              <a>Resources</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="bottom">
+        <p>
+          Copyright @2020 ,
+          All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <footer id="footer" v-else>
+      <div id="foot">
+        <div>
+          <h3 id="brand">
+            <a href="/">Usecase.io</a>
+          </h3>
+
+          <div id="media-icons">
+            <BIconWallet id="icon" />
+            <BIconWallet id="icon" />
+            <BIconWallet id="icon" />
+          </div>
+        </div>
+        <div>
+          <div id="column">
+            <h5 id="title">PRODUCT</h5>
+
+            <a>Resources</a>
+          </div>
+        </div>
+
+        <div>
+          <div id="column">
+            <h5 id="title">ABOUT</h5>
+            <div>
+              <a>Resources</a>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div id="column">
+            <h5 id="title">ABOUT</h5>
             <div>
               <a>Resources</a>
             </div>

@@ -9,40 +9,44 @@
         <h5 id="own">| {{owner}}</h5>
       </div>
 
-      <div id="input-box" v-if="$mq === 'laptop'">
-        <input type="text" placeholder="Search Case" />
+      <!-- BIGGER DISPLAYS -->
+      <div id="input-box" v-if="$mq !== 'tablet' && $mq  !== 'mobile'  ">
+        <div id="flex">
+          <BIconSearch id="icon" v-if="searching === false" />
+          <BIconX id="icon" v-else />
+          <input type="text" placeholder="Search Case" />
+        </div>
       </div>
     </div>
 
-    <ul v-if="$mq === 'tablet'">
-      <BIconSearch id="icon" />
-
-      <router-link to="/usecases/cases" id="link">Cases</router-link>
-      <router-link to="/login" id="link">Login</router-link>
-      <nuxt-link to="/documentation">
-        <button v-on="hi">Create Account</button>
-      </nuxt-link>
-    </ul>
-
-    <ul v-if="$mq === 'laptop'">
-      <router-link to="/create" id="link">Cases</router-link>
-      <router-link to="/login" id="link">Login</router-link>
-
-      <button v-on="hi">Create Account</button>
-    </ul>
-
+    <!-- MOBILE VIEW -->
     <div v-if="$mq === 'mobile'">
       <BIconList font-scale="2" id="icon" />
+    </div>
+
+    <!-- BIGGER  VIEWS -->
+    <div v-else>
+      <ul>
+        <BIconSearch id="icon" v-if="$mq !== 'laptop' && $mq  !== 'mobile'  " />
+        <router-link to="/usecases/cases" id="link">Cases</router-link>
+        <router-link to="/login" id="link">Login</router-link>
+        <a href="https://app.usecases.now.sh">
+          <button>Create Account</button>
+        </a>
+      </ul>
     </div>
   </div>
 </template>
 
 <script lang="ts" >
-import { BIconList, BIconSearch } from 'bootstrap-vue'
+import { BIconList, BIconSearch, BIconX } from 'bootstrap-vue'
 
 export default {
   name: 'Header',
-  components: { BIconList, BIconSearch },
+  components: { BIconList, BIconSearch, BIconX },
+  data: () => {
+    return { searching: false }
+  },
   props: ['owner', 'url']
 }
 </script>
