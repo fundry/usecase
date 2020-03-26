@@ -8,7 +8,7 @@
 
     <div id="container">
       <div id="contain" v-for="C in Cases" v-bind:key="C.id">
-        <h4>{{C.author}}</h4>
+        <h5>{{C.author}}</h5>
 
         <div id="box">{{C.name}}</div>
       </div>

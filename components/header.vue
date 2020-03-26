@@ -1,9 +1,13 @@
 <template>
   <div class="body" id="contain">
     <div id="flex">
-      <h3 id="title">
-        <nuxt-link to="/">Usecase</nuxt-link>
-      </h3>
+      <div id="flex">
+        <h3 id="title">
+          <nuxt-link to="/">Usecase</nuxt-link>
+        </h3>
+
+        <h5 id="own">| {{owner}}</h5>
+      </div>
 
       <div id="input-box" v-if="$mq === 'laptop'">
         <input type="text" placeholder="Search Case" />
@@ -38,11 +42,17 @@ import { BIconList, BIconSearch } from 'bootstrap-vue'
 
 export default {
   name: 'Header',
-  components: { BIconList, BIconSearch }
+  components: { BIconList, BIconSearch },
+  props: ['owner', 'url']
 }
 </script>
 
 <style scoped>
+#own {
+  padding-top: 10px;
+  padding-left: 5px;
+}
+
 #icon {
   padding-top: 10px;
   font-size: 2.1rem;

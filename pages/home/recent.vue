@@ -1,18 +1,24 @@
 <template >
   <div id="body">
     <div id="head">
-      <h5>Recently Featured Cases</h5>
+      <div v-if="searching === false">
+        <h5>Recently Featured Cases</h5>
+      </div>
+      <div v-else>
+        <h5>Searching : {{searchText}}</h5>
+      </div>
+      <div id="input-box" v-if="$mq === 'tablet'" @click="searching = true">
+        <BIconSearch id="icon" v-if="searching === false" />
+        <BIconX id="icon" v-else @click="searching = false" />
 
-      <div id="input-box" v-if="$mq === 'tablet'">
-        <BIconSearch id="icon" />
-
-        <input type="text" placeholder="Search Case" />
+        <input type="text" v-model="searchText" placeholder="Search Case" />
       </div>
 
-      <div id="input-box" v-else-if="$mq === 'laptop'">
-        <BIconSearch id="icon" />
+      <div id="input-box" v-else-if="$mq === 'laptop'" @click="searching = true">
+        <BIconSearch id="icon" v-if="searching === false" />
+        <BIconX id="icon" v-else @click="searching = false" />
 
-        <input type="text" placeholder="Search Case" />
+        <input type="text" v-model="searchText" placeholder="Search Case" />
       </div>
 
       <div v-else-if="$mq === 'mobile'">
@@ -21,17 +27,27 @@
     </div>
 
     <!-- mapping in Vuejs -->
-    <div v-bind:key="U.id" v-for="U in Usecases">
-      <div id="box">
-        <h6 id="org">{{U.author}}</h6>
+    <div v-if="searching === false">
+      <div v-bind:key="U.id" v-for="U in Usecases">
+        <div id="box">
+          <h6 id="org">{{U.author}}</h6>
 
-        <h6 id="title">{{U.title}}</h6>
+          <nuxt-link to="/usecases/usecase">
+            <h6 id="title">{{U.title}}</h6>
+          </nuxt-link>
 
-        <div id="stats">
-          <BIconBook id="icon" />
-          <BIconEye id="icon" />
-          <BIconBook id="icon" />
+          <div id="stats">
+            <BIconBook id="icon" />
+            <BIconEye id="icon" />
+            <BIconBook id="icon" />
+          </div>
         </div>
+      </div>
+    </div>
+
+    <div v-else>
+      <div id="loading">
+        <BIconArrowRepeat id="load-icon" />
       </div>
     </div>
   </div>
@@ -39,7 +55,13 @@
 
 <script lang="ts" >
 import Vue from 'vue'
-import { BIconSearch, BIconBook, BIconEye } from 'bootstrap-vue'
+import {
+  BIconSearch,
+  BIconBook,
+  BIconEye,
+  BIconArrowRepeat,
+  BIconX
+} from 'bootstrap-vue'
 import { gql } from 'apollo-boost'
 import { ALL_USECASES } from '../../data/queries'
 
@@ -56,15 +78,9 @@ export default {
   name: 'Home',
   data: () => {
     return {
-      txt: 'Testing',
+      searching: false,
       Usecases: {},
-      data: [
-        {
-          key: 1,
-          name: 'FlutterWave',
-          Title: 'Adopting Hasura Graphql Engine'
-        }
-      ]
+      data: []
     }
   },
 
@@ -76,6 +92,8 @@ export default {
 
   components: {
     BIconSearch,
+    BIconX,
+    BIconArrowRepeat,
     BIconBook,
     BIconEye
   }
@@ -83,6 +101,19 @@ export default {
 </script>
 
 <style scoped>
+#icon {
+  cursor: pointer;
+}
+
+#loading {
+  font-size: 3rem;
+  text-align: center;
+}
+
+#load-icon {
+  font-size: 2.5rem;
+}
+
 #input-box {
   border: 1px solid black;
   border-radius: 10px;
@@ -93,7 +124,7 @@ export default {
 
 h5 {
   padding-top: 7px;
-  padding-left: 20px;
+  padding-left: 10px;
 }
 
 #body {
@@ -103,7 +134,7 @@ h5 {
 #org {
   cursor: pointer;
   font-weight: bold;
-  font-size: 1.3em;
+  font-size: 1.2em;
 }
 #head {
   display: flex;
