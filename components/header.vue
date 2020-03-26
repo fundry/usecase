@@ -64,7 +64,7 @@ export default {
 
 input[type='text'] {
   padding: 0.3em;
-  border: none;
+  border: 0px;
   background: transparent;
   height: 40px;
   outline: 0px;
