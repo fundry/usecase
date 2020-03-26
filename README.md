@@ -1,6 +1,7 @@
-# brand
+<h2 style={{text-align : center}} >  UseCase brand Website </h2>
+<p> This Repository contains the  source code for the usecase brand website built usng `Vue`, `Nuxt.js` and  `Apollo` </p>
 
-> brand page for usecases
+<p> This brand website is built to serve as a documentation for the <b>  Usecase </b> platform. It explains what <b> Usecase </b> is all about. It also links and redirects users to the [Usecase Console](https://app.usecase.now.sh) .   </p>
 
 ## Build Setup
 
@@ -15,8 +16,4 @@ $ yarn dev
 $ yarn build
 $ yarn start
 
-# generate static project
-$ yarn generate
-```
-
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+ 

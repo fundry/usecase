@@ -5,6 +5,7 @@
       <button>Document With UseCase</button>
     </div>
 
+    <!-- MOBILE VIEW -->
     <footer id="footer" v-if="$mq === 'mobile'">
       <div id="foot-mobile">
         <div id="brand-mobile">
@@ -23,7 +24,10 @@
           <div id="column">
             <h5 id="title-mobile">PRODUCT</h5>
 
-            <a>Resources</a>
+            <div id="list">
+              <a>Resources</a>
+              <a>Api</a>
+            </div>
           </div>
 
           <div id="column">
@@ -34,7 +38,7 @@
           </div>
 
           <div id="column">
-            <h5 id="title-mobile">ABOUT</h5>
+            <h5 id="title-mobile">MORE</h5>
             <div>
               <a>Resources</a>
             </div>
@@ -50,6 +54,7 @@
       </div>
     </footer>
 
+    <!-- VIEWS BIGGER THAN MOBILE -->
     <footer id="footer" v-else>
       <div id="foot">
         <div>
@@ -82,7 +87,7 @@
 
         <div>
           <div id="column">
-            <h5 id="title">ABOUT</h5>
+            <h5 id="title">MORE</h5>
             <div>
               <a>Resources</a>
             </div>
