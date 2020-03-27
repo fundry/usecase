@@ -108,7 +108,7 @@ export default {
         websocketsOnly: false, // Optional
       },
       test: {
-        httpEndpoint: 'http://127.0.0.1:8080/v1/graphql',
+        httpEndpoint: URL,
         wsEndpoint: null,
         tokenName: 'apollo-token',
       },
