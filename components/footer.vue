@@ -22,12 +22,10 @@
 
         <div id="mobile-sections">
           <div id="column">
-            <h5 id="title-mobile">PRODUCT</h5>
-
-            <div id="list">
-              <a>Resources</a>
-              <a>Api</a>
-            </div>
+            <h5 id="title">PRODUCT</h5>
+            <a>Resources</a>
+            <a>Documentation</a>
+            <a>Api</a>
           </div>
 
           <div id="column">
@@ -71,8 +69,9 @@
         <div>
           <div id="column">
             <h5 id="title">PRODUCT</h5>
-
             <a>Resources</a>
+            <a>Documentation</a>
+            <a>Api</a>
           </div>
         </div>
 
@@ -80,7 +79,7 @@
           <div id="column">
             <h5 id="title">ABOUT</h5>
             <div>
-              <a>Resources</a>
+              <a>Legal</a>
             </div>
           </div>
         </div>
@@ -89,7 +88,7 @@
           <div id="column">
             <h5 id="title">MORE</h5>
             <div>
-              <a>Resources</a>
+              <a>Social</a>
             </div>
           </div>
         </div>
@@ -177,6 +176,7 @@ export default {
 
 #column {
   flex-direction: column;
+  display: grid;
 }
 
 #title {
