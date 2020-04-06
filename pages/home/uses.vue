@@ -1,24 +1,35 @@
 <template >
   <div class="body">
-    <div class="track">
+    <div v-if="$mq === 'mobile'">
       <div>
         <h3>Keep track of small contributions</h3>
         <p>Integrate your usecase with your development tools and keep track of small contributions and write about them</p>
       </div>
       <img alt="Point illustration" src="../../assets/svg/sample.svg" />
+
+      <br />
     </div>
 
-    <br />
-    <div class="myst">
-      <img alt="Point illustration" src="../../assets/svg/sample.svg" />
+    <div v-else>
+      <div class="track">
+        <div>
+          <h3>Keep track of small contributions</h3>
+          <p>Integrate your usecase with your development tools and keep track of small contributions and write about them</p>
+        </div>
+        <img alt="Point illustration" src="../../assets/svg/sample.svg" />
+      </div>
 
-      <div>
-        <h3>Engineering Demystified</h3>
+      <br />
+      <div class="myst">
+        <img alt="Point illustration" src="../../assets/svg/sample.svg" />
 
-        <p>Get a sneek peek into production level engneering infrastructures and see how they are glued together.</p>
+        <div>
+          <h3>Engineering Demystified</h3>
+
+          <p>Get a sneek peek into production level engneering infrastructures and see how they are glued together.</p>
+        </div>
       </div>
     </div>
-
     <br />
   </div>
 </template>
