@@ -5,13 +5,13 @@
         <h5>Recent Usecases</h5>
       </div>
       <div v-else>
-        <h5>Searching : {{searchText}}</h5>
+        <h5>Searching :</h5>
       </div>
       <div id="input-box" v-if="$mq !== 'tablet' && $mq  !== 'mobile'  " @click="searching = true">
         <BIconSearch id="icon" v-if="searching === false" />
         <BIconX id="icon" v-else @click="searching = false" />
 
-        <input type="text" v-model="searchText" placeholder="Search Case" />
+        <input type="text" placeholder="Search Case" />
       </div>
 
       <div v-else-if="$mq === 'mobile'">
