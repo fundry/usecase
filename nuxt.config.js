@@ -94,7 +94,7 @@ export default {
     clientConfigs: {
       default: {
         // required
-        httpEndpoint: 'http://localhost:8080/v1/graphql',
+        httpEndpoint: 'https://app-usecases.herokuapp.com/v1/graphql', // this for testing only and is WRONG
         // override HTTP endpoint in browser only
         // browserHttpEndpoint: '/console',
         // optional
