@@ -1,16 +1,14 @@
 <template >
   <div id="body">
     <br />
-        <p>  DOCUMENTATION PAGES </p>
+    <p>DOCUMENTATION PAGES</p>
   </div>
 </template>
 
 <script>
-
 export default {
   name: 'Documentation',
-  components: {
-  }
+  components: {}
 }
 </script>
 
@@ -39,10 +37,6 @@ h4 {
 }
 
 #body {
-  text-align: center;
-}
-
-p {
   text-align: center;
 }
 </style>

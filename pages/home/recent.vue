@@ -75,7 +75,7 @@ new Vue({
 })
 
 export default {
-  name: 'Home',
+  name: 'Recent',
   data: () => {
     return {
       searching: false,

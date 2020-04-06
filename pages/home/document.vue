@@ -1,21 +1,20 @@
 <template >
-  <div id="body">
+  <div class="body">
     <br />
 
-    <h3>Document Your Usecase ...</h3>
-
-    <p>Document your usecase without having to manually write about it.</p>
+    <h3>Write in bits, Compile and Publish</h3>
   </div>
 </template>
 
 <script>
 export default {
-  name: "Document"
-};
+  name: 'Document'
+}
 </script>
 
 <style scoped lang="postcss" >
-h4 {
+h3 {
+  text-align: center;
 }
 
 #body {

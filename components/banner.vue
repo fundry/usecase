@@ -7,22 +7,16 @@
 
       <!-- MOBILE -->
       <div v-if=" $mq === 'mobile' ">
-        <h1>A Collection of your Actions</h1>
+        <h1>A Collection of your Tiny Actions</h1>
 
-        <p>
-          Make choices based on recent choices made by others and see how it fits
-          your usecase.
-        </p>
+        <p>A technical diary for individuals and organizations aimed at fostering writing and documentation of actions</p>
       </div>
 
       <!-- TABLET -->
       <div v-if="$mq === 'tablet'">
-        <h1>A Collection of your Actions</h1>
+        <h1>A Collection of your Tiny Actions</h1>
 
-        <p>
-          Make choices based on recent choices made by others and see how it fits
-          your usecase.
-        </p>
+        <p>A technical diary for individuals and organizations aimed at fostering writing and documentation of actions</p>
       </div>
       <!--  LARGE DISPLAYS -->
       <div id="cover" v-else-if="$mq !== 'tablet' && $mq  !== 'mobile'  ">
@@ -35,12 +29,9 @@
             <br />
             <br />
             <br />
-            <h1>A Collection of your Actions</h1>
+            <h1>A Collection of your Tiny Actions</h1>
 
-            <p>
-              Make choices based on recent choices made by others and see how it fits
-              your usecase.
-            </p>
+            <p>A technical diary for individuals and organizations aimed at fostering writing and documentation of actions</p>
           </div>
         </div>
         <br />

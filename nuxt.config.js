@@ -48,10 +48,15 @@ export default {
   ],
 
   build: {
-    /*
-    ** You can extend webpack config here
-    */
-    extend(config, ctx) {},
+    postcss: {
+      plugins: {
+        'postcss-preset-env': {
+          stage: 0,
+          importFrom: './assets/variables.css',
+        },
+        'rucksack-css': {},
+      },
+    },
   },
   apollo: {
     // tokenName: 'yourApolloTokenName', // optional, default: apollo-token
@@ -108,7 +113,7 @@ export default {
         websocketsOnly: false, // Optional
       },
       test: {
-        httpEndpoint: URL,
+        httpEndpoint: URL || 'http://localhost:8080/v1/graphql',
         wsEndpoint: null,
         tokenName: 'apollo-token',
       },

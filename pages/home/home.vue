@@ -2,14 +2,15 @@
   <div>
     <Banner />
     <div class="hello">
-      <div id="body">
+      <div class="body">
         <p
           id="desc"
-        >Usecase helps you make better choices by getting a direct peep into other people's Usecases can help influence your descisions.</p>
+        >Usecases fosters writing and proper documentating by letting you write in bits the tiny steps and actions taken towards achieving a goal.</p>
       </div>
-      <div>
+
+      <div class>
         <Uses />
-        <Record />
+        <Project />
 
         <Recent />
 
@@ -21,24 +22,52 @@
 </template>
 
 <script>
-import Recent from './recent'
-import Uses from './uses'
-import Document from './document'
-import Publish from './publish'
-import Record from './record'
+import Recent from './recent.vue'
+import Uses from './uses.vue'
+import Document from './document.vue'
+import Publish from './publish.vue'
+import Project from './projects.vue'
 
 import Banner from '../../components/banner'
 
 export default {
   name: 'Home',
 
-  components: { Banner, Recent, Record, Publish, Document, Uses }
+  components: { Banner, Recent, Project, Publish, Document, Uses }
 }
 </script>
 
-<style scoped>
-#body {
+<style scoped lang="postcss" >
+.body {
   padding: 0.5em;
+  color: black;
+  & p {
+    font-size: 1rem;
+  }
+  @media (--sm) {
+    padding: 1rem;
+    & p {
+      font-size: 1.1rem;
+    }
+  }
+  @media (--md) {
+    padding: 1rem 2rem;
+    & p {
+      font-size: 1.2rem;
+    }
+  }
+  @media (--lg) {
+    padding: 1rem 4rem;
+    & p {
+      font-size: 1.2rem;
+    }
+  }
+  @media (--xl) {
+    padding: 1rem 7rem;
+    & p {
+      font-size: 1.2rem;
+    }
+  }
 }
 
 #desc {
@@ -49,5 +78,6 @@ export default {
 
 a {
   color: #42b983;
+  text-decoration: none;
 }
 </style>

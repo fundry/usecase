@@ -30,7 +30,7 @@
         <BIconSearch id="icon" v-if="$mq !== 'laptop' && $mq  !== 'mobile'  " />
         <router-link to="/usecases/cases" id="link">Cases</router-link>
         <router-link to="/login" id="link">Login</router-link>
-        <a href="https://app.usecases.now.sh">
+        <a href="https://app-usecase.netlify.com">
           <button>Create Account</button>
         </a>
       </ul>

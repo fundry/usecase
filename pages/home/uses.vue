@@ -1,11 +1,22 @@
 <template >
-  <div id="body">
-    <h3>Engineering Demystified</h3>
+  <div class="body">
+    <div class="track">
+      <div>
+        <h3>Keep track of small contributions</h3>
+        <p>Integrate your usecase with your development tools and keep track of small contributions and write about them</p>
+      </div>
+      <img alt="Point illustration" src="../../assets/svg/sample.svg" />
+    </div>
 
-    <p>Everyone can create a Case then make multiple usecase to record the descions made within a Case.</p>
+    <br />
+    <div class="myst">
+      <img alt="Point illustration" src="../../assets/svg/sample.svg" />
 
-    <div>
-      <img alt="illustration" src="../../assets/svg/demystified.svg" />
+      <div>
+        <h3>Engineering Demystified</h3>
+
+        <p>Get a sneek peek into production level engneering infrastructures and see how they are glued together.</p>
+      </div>
     </div>
 
     <br />
@@ -19,9 +30,61 @@ export default {
 </script>
  
 <style scoped lang="postcss" >
+.body {
+  padding: 1rem;
+  text-align: center;
+  @media (--sm) {
+    & p {
+      font-size: 1.1rem;
+    }
+  }
+  @media (--md) {
+    & p {
+      font-size: 1.2rem;
+    }
+  }
+  @media (--lg) {
+    & p {
+      font-size: 1.2rem;
+    }
+  }
+  @media (--xl) {
+    & p {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.track {
+  display: flex;
+  justify-content: space-between;
+  text-align: right;
+  & h3 {
+    padding-left: 20px;
+    text-align: left;
+  }
+  & p {
+    text-align: left;
+    width: 70%;
+  }
+}
+
+.myst {
+  display: flex;
+  justify-content: space-between;
+  text-align: right;
+  & h3 {
+    padding-right: 20px;
+    text-align: right;
+  }
+  & p {
+    text-align: right;
+    margin-left: 12rem;
+  }
+}
+
 #body {
   padding: 0.5em;
-  text-align: center;
 }
 
 img {
