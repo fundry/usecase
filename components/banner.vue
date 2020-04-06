@@ -4,7 +4,7 @@
       <div id="cover" v-if="$mq === 'tablet'">
         <img src="../assets/svg/cover.svg" alt="illustration" class="img" :class="$mq" />
       </div>
-
+      <p>{{$mq}} mq</p>
       <!-- MOBILE -->
       <div v-if=" $mq === 'mobile' ">
         <h1>A Collection of your Tiny Actions</h1>
