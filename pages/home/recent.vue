@@ -2,7 +2,7 @@
   <div id="body">
     <div id="head">
       <div v-if="searching === false">
-        <h5>Recently Featured Cases</h5>
+        <h5>Recently Usecases</h5>
       </div>
       <div v-else>
         <h5>Searching : {{searchText}}</h5>

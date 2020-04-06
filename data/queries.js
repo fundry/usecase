@@ -7,7 +7,6 @@ const ALL_USECASES = gql`
       author
       title
       created
-      title
     }
   }
 `;
