@@ -1,6 +1,5 @@
 <template>
   <div>
-    <Banner />
     <div class="hello">
       <div class="body">
         <p

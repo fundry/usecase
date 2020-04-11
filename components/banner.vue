@@ -1,40 +1,43 @@
 <template>
-  <div>
-    <div id="body">
-      <div id="cover" v-if="$mq === 'tablet'">
+  <div class="body">
+    <div id="cover" v-if="$mq === 'tablet'">
+      <img src="../assets/svg/cover.svg" alt="illustration" class="img" :class="$mq" />
+    </div>
+    <!-- MOBILE -->
+    <div v-if=" $mq === 'mobile' ">
+      <br />
+      <img src="../assets/svg/cover.svg" alt="illustration" class="img" :class="$mq" />
+
+      <br />
+      <br />
+      <h1>Simplistic Writing For Everyone</h1>
+
+      <p>Usecase is a Simplistic writing tool, built to improve the writing habit in individuals and organizations</p>
+    </div>
+
+    <!-- TABLET -->
+    <div v-if="$mq === 'tablet'">
+      <h1>Simplistic Writing For Everyone</h1>
+
+      <p>Usecase is a Simplistic writing tool, built to improve the writing habit in individuals and organizations</p>
+    </div>
+    <!--  LARGE DISPLAYS -->
+    <div id="cover" v-else-if="$mq !== 'tablet' && $mq  !== 'mobile'  ">
+      <br />
+      <div id="flex">
+        <br />
         <img src="../assets/svg/cover.svg" alt="illustration" class="img" :class="$mq" />
-      </div>
-      <!-- MOBILE -->
-      <div v-if=" $mq === 'mobile' ">
-        <h1>A Collection of your Tiny Actions</h1>
 
-        <p>A technical diary for individuals and organizations aimed at fostering writing and documentation of actions</p>
-      </div>
-
-      <!-- TABLET -->
-      <div v-if="$mq === 'tablet'">
-        <h1>A Collection of your Tiny Actions</h1>
-
-        <p>A technical diary for individuals and organizations aimed at fostering writing and documentation of actions</p>
-      </div>
-      <!--  LARGE DISPLAYS -->
-      <div id="cover" v-else-if="$mq !== 'tablet' && $mq  !== 'mobile'  ">
-        <br />
-        <div id="flex">
+        <div>
           <br />
-          <img src="../assets/svg/cover.svg" alt="illustration" class="img" :class="$mq" />
+          <br />
+          <br />
+          <h1>Simplistic Writing For Everyone</h1>
 
-          <div>
-            <br />
-            <br />
-            <br />
-            <h1>A Collection of your Tiny Actions</h1>
-
-            <p>A technical diary for individuals and organizations aimed at fostering writing and documentation of actions</p>
-          </div>
+          <p>Usecase is a Simplistic writing tool, built to improve the writing habit in individuals and organizations</p>
         </div>
-        <br />
       </div>
+      <br />
     </div>
   </div>
 </template>
@@ -52,53 +55,80 @@ export default {
 <style scoped lang="postcss">
 #flex {
   display: flex;
+  justify-content: center;
 }
-
-.img {
-  max-width: 35em;
-  height: auto;
-  align-self: auto;
-  &.mobile {
-    max-width: 20em;
-  }
-}
-
-h1 {
-  font-weight: bolder;
-  @media (max-width: 400px;) {
-    font-size: 2em;
-  }
-
-  @media (max-width: 1200px;) {
-    font-size: 3em;
-  }
-
-  @media (max-width: 1500px;) {
-    font-size: 4em;
-  }
-}
-
 #cover {
   text-align: center;
 }
 
-#body {
-  /* @media screen and (max-width: 1020px) {
-    background: black;
-  } */
+.body {
   text-align: center;
   padding: 2em;
   background: #f2f5ff;
   color: #1d2279;
-}
-
-p {
-  text-align: center;
-  font-size: 1.3em;
-  padding: 0em 2em 0em;
-}
-
-body {
-  padding: 1em;
+  justify-content: center;
+  & h1 {
+    font-weight: bolder;
+    font-size: 2.5rem;
+  }
+  & p {
+    text-align: center;
+    font-size: 1.3em;
+    padding: 0em 3em 0em;
+  }
+  & img {
+    max-width: 35em;
+    height: auto;
+    align-self: auto;
+  }
+  @media (--sm) {
+    & h1 {
+      font-weight: bolder;
+      font-size: 2rem;
+    }
+    & p {
+      font-size: 1.25em;
+      padding: 0em 0.5em 0em;
+    }
+    & img {
+      max-width: 18rem;
+    }
+  }
+  @media (--md) {
+    & h1 {
+      font-size: 2.3rem;
+    }
+    & p {
+      font-size: 1.3em;
+      padding: 0em 3em 0em;
+    }
+    & img {
+      max-width: 35rem;
+    }
+  }
+  @media (--lg) {
+    & h1 {
+      font-size: 2.5rem;
+    }
+    & p {
+      font-size: 1.4em;
+      padding: 0em 3em 0em;
+    }
+    & img {
+      max-width: 35rem;
+    }
+  }
+  @media (--xl) {
+    & h1 {
+      font-size: 3rem;
+    }
+    & p {
+      font-size: 1.5em;
+      padding: 0em 9em 0em;
+    }
+    & img {
+      max-width: 40rem;
+    }
+  }
 }
 </style>
