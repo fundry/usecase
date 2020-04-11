@@ -1,7 +1,7 @@
 <template>
   <div class="body">
     <div class="contain">
-      <h3>Document Small Personal Projects.</h3>
+      <h3>Engineering Demystified</h3>
       <p>Keep track of your small personal projects by writing steps taken in building them and compile after the development process.</p>
       <br />
     </div>

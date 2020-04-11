@@ -8,19 +8,40 @@
       </p>
       <img src="../../../assets/svg/sample-console.svg" alt="sample console" />
       <br />
-      <button>Try A Demo</button>
+
+      <button>
+        <div class="flex">
+          Try A Quick Demo
+          <div id="icon-ctn">
+            <BIconDisplay id="icon" />
+          </div>
+        </div>
+      </button>
     </div>
   </div>
 </template>
 
 <script>
+import { BIconDisplay } from 'bootstrap-vue'
+
 export default {
   name: 'Organizations',
-  components: {}
+  components: { BIconDisplay }
 }
 </script>
 
 <style scoped lang="postcss" >
+#icon {
+  font-size: 1.9rem;
+  color: #fff;
+}
+.flex {
+  display: flex;
+  & div {
+    padding-left: 10px;
+  }
+}
+
 .body {
   padding: 1rem;
   & div {
@@ -63,7 +84,7 @@ export default {
       box-shadow: 0px 7px 7px #0b33a2;
       margin: 0 1em;
       font-size: 1.2rem;
-      padding: 0.7em 5em;
+      padding: 0.6em 2.7em;
     }
   }
   @media (--md) {
@@ -83,7 +104,7 @@ export default {
       box-shadow: 0px 7px 7px #0b33a2;
       margin: 0 1em;
       font-size: 1.2rem;
-      padding: 0.7em 5em;
+      padding: 0.7em 3em;
     }
   }
   @media (--lg) {
@@ -102,7 +123,7 @@ export default {
       color: #fff;
       box-shadow: 0px 7px 7px #0b33a2;
       margin: 0 1em;
-      padding: 0.7em 4.8em;
+      padding: 0.7em 3em;
       font-size: 1.1rem;
     }
   }
@@ -123,7 +144,7 @@ export default {
       box-shadow: 0px 7px 7px #0b33a2;
       margin: 0 1em;
       font-size: 1.1rem;
-      padding: 0.7em 5em;
+      padding: 0.7em 3em;
     }
   }
 }

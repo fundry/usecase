@@ -1,53 +1,57 @@
 <template>
-  <div class="body">
-    <div id="cover" v-if="$mq === 'tablet'">
-      <img src="../assets/svg/cover.svg" alt="illustration" class="img" :class="$mq" />
-    </div>
-    <!-- MOBILE -->
-    <div v-if=" $mq === 'mobile' ">
-      <br />
-      <img src="../assets/svg/cover.svg" alt="illustration" class="img" :class="$mq" />
-
-      <br />
-      <br />
-      <h1>A Simplistic Writing Console For Everyone</h1>
-
-      <p>Usecase is a Simplistic writing tool, built to improve the writing habit in individuals and organizations</p>
-    </div>
-
-    <!-- TABLET -->
-    <div v-if="$mq === 'tablet'">
-      <h1>A Simplistic Writing Console For Everyone</h1>
-
-      <p>Usecase is a Simplistic writing tool, built to improve the writing habit in individuals and organizations</p>
-    </div>
-    <!--  LARGE DISPLAYS -->
-    <div id="cover" v-else-if="$mq !== 'tablet' && $mq  !== 'mobile'  ">
-      <br />
-      <div id="flex">
+  <div>
+    <Header />
+    <div class="body">
+      <div id="cover" v-if="$mq === 'tablet'">
+        <img src="../assets/svg/cover.svg" alt="illustration" class="img" :class="$mq" />
+      </div>
+      <!-- MOBILE -->
+      <div v-if=" $mq === 'mobile' ">
         <br />
         <img src="../assets/svg/cover.svg" alt="illustration" class="img" :class="$mq" />
 
-        <div>
-          <br />
-          <br />
-          <br />
-          <h1>A Simplistic Writing Console For Everyone</h1>
+        <br />
+        <br />
+        <h1>A Simplistic Writing Console For Everyone</h1>
 
-          <p>Usecase is a Simplistic writing tool, built to improve the writing habit in individuals and organizations</p>
-        </div>
+        <p>Usecase is a Simplistic writing tool, built to improve the writing habit in individuals and organizations</p>
       </div>
-      <br />
+
+      <!-- TABLET -->
+      <div v-if="$mq === 'tablet'">
+        <h1>A Simplistic Writing Console For Everyone</h1>
+
+        <p>Usecase is a Simplistic writing tool, built to improve the writing habit in individuals and organizations</p>
+      </div>
+      <!--  LARGE DISPLAYS -->
+      <div id="cover" v-else-if="$mq !== 'tablet' && $mq  !== 'mobile'  ">
+        <br />
+        <div id="flex">
+          <br />
+          <img src="../assets/svg/cover.svg" alt="illustration" class="img" :class="$mq" />
+
+          <div>
+            <br />
+            <br />
+            <br />
+            <h1>A Simplistic Writing Console For Everyone</h1>
+
+            <p>Usecase is a Simplistic writing tool, built to improve the writing habit in individuals and organizations</p>
+          </div>
+        </div>
+        <br />
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 import Vue from 'vue'
+import Header from './header.vue'
 
 export default {
   name: 'Banner',
-  components: {}
+  components: { Header }
 }
 </script>
 

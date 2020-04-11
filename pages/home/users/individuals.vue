@@ -1,6 +1,12 @@
 <template>
   <div class="body">
-    <h4>Individuals</h4>
+    <h4>Usecase For Individuals</h4>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
   </div>
 </template>
 
@@ -14,5 +20,10 @@ export default {
 <style scoped lang="postcss" >
 .body {
   padding: 1rem;
+  background: aliceblue;
+  & h4 {
+    text-align: right;
+    color: #361f94;
+  }
 }
 </style>

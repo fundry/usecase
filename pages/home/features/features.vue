@@ -8,7 +8,7 @@
           <img alt="illustration" src="../../../assets/svg/sample.svg" />
         </div>
 
-        <h3>Publish.</h3>
+        <h3>Publish</h3>
 
         <p>Publish your usecase without having to manually write about it.</p>
       </div>
@@ -63,6 +63,7 @@ export default {
 <style scoped lang="postcss" >
 #img {
   text-align: center;
+  max-width: 20rem;
 }
 
 .items {

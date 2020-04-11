@@ -27,9 +27,12 @@
     <!-- BIGGER  VIEWS -->
     <div v-else>
       <ul>
-        <BIconSearch id="icon" v-if="$mq !== 'laptop' && $mq  !== 'mobile'  " />
-        <router-link to="/usecases/cases" id="link">Cases</router-link>
-        <router-link to="/login" id="link">Login</router-link>
+        <li>
+          <router-link to="/usecases/cases" id="link">Cases</router-link>
+        </li>
+        <li>
+          <router-link to="/login" id="link">Login</router-link>
+        </li>
         <a href="https://app-usecase.netlify.com">
           <button>Create Account</button>
         </a>
@@ -119,7 +122,8 @@ ul {
 }
 li {
   display: inline-block;
-  margin: 0 10px;
+  margin: 0 5px;
+  font-size: 1.2rem;
 }
 #link {
   color: #42b983;

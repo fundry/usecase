@@ -1,10 +1,7 @@
 <template>
   <div>
-    <Header />
     <Banner />
-    <div>
-      <Home />
-    </div>
+    <Home />
     <Footer />
   </div>
 </template>
@@ -17,7 +14,6 @@ import VueApollo from 'vue-apollo'
 
 import 'bootstrap-vue/dist/bootstrap-vue-icons.min.css'
 import Home from './home/home.vue'
-import Header from '../components/header.vue'
 import Banner from '../components/banner.vue'
 import Footer from '../components/footer.vue'
 
@@ -57,7 +53,6 @@ export default {
 
   components: {
     Home,
-    Header,
     Footer,
     Banner
   }

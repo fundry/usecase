@@ -1,5 +1,6 @@
 <template>
   <div>
+    <hr />
     <div id="create">
       <p>Recently made a hard choice ?</p>
       <button>Document With UseCase</button>

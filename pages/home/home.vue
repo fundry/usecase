@@ -2,11 +2,13 @@
   <div>
     <div class="hello">
       <Organization />
-      <Individual />
+      <br />
 
       <div>
         <Uses />
-        <Project />
+        <Mystified />
+        <Individual />
+
         <Recent />
         <Document />
         <Features />
@@ -22,7 +24,7 @@ import {
   Uses,
   Document,
   Features,
-  Project,
+  Mystified,
   Organization,
   Individual
 } from './'
@@ -32,7 +34,7 @@ export default {
   components: {
     Banner,
     Recent,
-    Project,
+    Mystified,
     Features,
     Document,
     Uses,
