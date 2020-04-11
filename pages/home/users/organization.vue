@@ -1,0 +1,130 @@
+<template>
+  <div class="body">
+    <div>
+      <br />
+      <p>
+        Leverage upon
+        <b>Usecases's console</b> to prepare and documents consistent bits of information for your organization bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+      </p>
+      <img src="../../../assets/svg/sample-console.svg" alt="sample console" />
+      <br />
+      <button>Try A Demo</button>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'Organizations',
+  components: {}
+}
+</script>
+
+<style scoped lang="postcss" >
+.body {
+  padding: 1rem;
+  & div {
+    text-align: center;
+  }
+  & p {
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+  }
+  & button {
+    background: #361f94;
+    border: 1px solid #0e2f5a;
+    border-radius: 7px;
+    color: #fff;
+    box-shadow: 0px 7px 7px #0b33a2;
+    margin: 0 1em;
+    padding: 0.7em 5em;
+    outline: none;
+    font-size: 1.2rem;
+  }
+  & img {
+    height: auto;
+    width: 30rem;
+    cursor: pointer;
+  }
+  @media (--sm) {
+    & p {
+      font-size: 1.15rem;
+      padding: 0.5rem 1rem;
+    }
+    & img {
+      height: auto;
+      width: 30rem;
+    }
+    & button {
+      background: #361f94;
+      border: 1px solid #0e2f5a;
+      border-radius: 10px;
+      color: #fff;
+      box-shadow: 0px 7px 7px #0b33a2;
+      margin: 0 1em;
+      font-size: 1.2rem;
+      padding: 0.7em 5em;
+    }
+  }
+  @media (--md) {
+    & p {
+      font-size: 1.2rem;
+      padding: 0.5rem 1rem;
+    }
+    & img {
+      height: auto;
+      width: 30rem;
+    }
+    & button {
+      background: #361f94;
+      border: 1px solid #0e2f5a;
+      border-radius: 7px;
+      color: #fff;
+      box-shadow: 0px 7px 7px #0b33a2;
+      margin: 0 1em;
+      font-size: 1.2rem;
+      padding: 0.7em 5em;
+    }
+  }
+  @media (--lg) {
+    & p {
+      font-size: 1.4rem;
+      padding: 0.5rem 1rem;
+    }
+    & img {
+      height: auto;
+      width: 50rem;
+    }
+    & button {
+      background: #361f94;
+      border: 1px solid #0e2f5a;
+      border-radius: 7px;
+      color: #fff;
+      box-shadow: 0px 7px 7px #0b33a2;
+      margin: 0 1em;
+      padding: 0.7em 4.8em;
+      font-size: 1.1rem;
+    }
+  }
+  @media (--xl) {
+    & p {
+      font-size: 1.4rem;
+      padding: 0.5rem 6rem;
+    }
+    & img {
+      height: auto;
+      width: 65rem;
+    }
+    & button {
+      background: #361f94;
+      border: 1px solid #0e2f5a;
+      border-radius: 7px;
+      color: #fff;
+      box-shadow: 0px 7px 7px #0b33a2;
+      margin: 0 1em;
+      font-size: 1.1rem;
+      padding: 0.7em 5em;
+    }
+  }
+}
+</style>

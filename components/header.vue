@@ -93,11 +93,11 @@ input[type='text'] {
 }
 
 button {
-  background: transparent;
-  color: black;
+  background: #361f94;
+  color: #fff;
   outline: 0px;
-  border: 1px solid black;
-  padding: 0.4em 1.1em;
+  border: 0px;
+  padding: 0.6em 1.1em;
   border-radius: 5px;
   margin-left: 20px;
 }
@@ -107,6 +107,10 @@ button {
   font-weight: lighter;
   padding-top: 4px;
   font-size: 1.7em;
+}
+
+a {
+  text-decoration: none;
 }
 
 ul {

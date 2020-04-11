@@ -1,38 +1,44 @@
 <template>
   <div>
     <div class="hello">
-      <div class="body">
-        <p
-          id="desc"
-        >Usecases fosters writing and proper documentating by letting you write in bits the tiny steps and actions taken towards achieving a goal.</p>
-      </div>
+      <Organization />
+      <Individual />
 
-      <div class>
+      <div>
         <Uses />
         <Project />
-
         <Recent />
-
         <Document />
-        <Publish />
+        <Features />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import Recent from './recent.vue'
-import Uses from './uses.vue'
-import Document from './document.vue'
-import Publish from './publish.vue'
-import Project from './projects.vue'
-
-import Banner from '../../components/banner'
+import {
+  Recent,
+  Banner,
+  Uses,
+  Document,
+  Features,
+  Project,
+  Organization,
+  Individual
+} from './'
 
 export default {
   name: 'Home',
-
-  components: { Banner, Recent, Project, Publish, Document, Uses }
+  components: {
+    Banner,
+    Recent,
+    Project,
+    Features,
+    Document,
+    Uses,
+    Individual,
+    Organization
+  }
 }
 </script>
 
@@ -41,30 +47,34 @@ export default {
   padding: 0.5em;
   color: black;
   & p {
-    font-size: 1rem;
+    font-size: 2rem;
   }
   @media (--sm) {
-    padding: 1rem;
+    padding: 0.5rem 0.5rem;
     & p {
-      font-size: 1.1rem;
+      font-size: 1rem;
+      color: black;
     }
   }
   @media (--md) {
     padding: 1rem 2rem;
     & p {
       font-size: 1.2rem;
+      color: black;
     }
   }
   @media (--lg) {
     padding: 1rem 4rem;
     & p {
       font-size: 1.2rem;
+      color: green;
     }
   }
   @media (--xl) {
     padding: 1rem 7rem;
     & p {
       font-size: 1.2rem;
+      color: brown;
     }
   }
 }

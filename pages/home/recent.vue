@@ -13,8 +13,7 @@
 
         <input type="text" placeholder="Search Case" />
       </div>
-
-      <div v-else-if="$mq === 'mobile'">
+      <div v-else-if="$mq === 'mobile' ||  'tablet' ">
         <BIconSearch id="icon" />
       </div>
     </div>

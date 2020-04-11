@@ -5,7 +5,7 @@
     <div v-if="$mq === 'mobile'">
       <div class="contain">
         <div>
-          <img alt="illustration" src="../../assets/svg/sample.svg" />
+          <img alt="illustration" src="../../../assets/svg/sample.svg" />
         </div>
 
         <h3>Publish.</h3>
@@ -15,28 +15,19 @@
       <br />
       <div class="contain">
         <div>
-          <img alt="illustration" src="../../assets/svg/sample.svg" />
+          <img alt="illustration" src="../../../assets/svg/sample.svg" />
         </div>
 
         <h3>Query</h3>
-
         <p>Publish your usecase without having to manually write about it.</p>
       </div>
       <br />
-      <div class="contain">
-        <div>
-          <img alt="illustration" src="../../assets/svg/sample.svg" />
-        </div>
-        <h3>Share</h3>
-
-        <p>Publish your usecase without having to manually write about it.</p>
-      </div>
     </div>
 
     <div class="items" v-else>
       <div class="contain">
         <div>
-          <img alt="illustration" src="../../assets/svg/sample.svg" />
+          <img alt="illustration" src="../../../assets/svg/sample.svg" />
         </div>
 
         <h3>Publish.</h3>
@@ -46,19 +37,10 @@
 
       <div class="contain">
         <div>
-          <img alt="illustration" src="../../assets/svg/sample.svg" />
+          <img alt="illustration" src="../../../assets/svg/sample.svg" />
         </div>
 
         <h3>Query</h3>
-
-        <p>Publish your usecase without having to manually write about it.</p>
-      </div>
-
-      <div class="contain">
-        <div>
-          <img alt="illustration" src="../../assets/svg/sample.svg" />
-        </div>
-        <h3>Share</h3>
 
         <p>Publish your usecase without having to manually write about it.</p>
       </div>
@@ -85,7 +67,7 @@ export default {
 
 .items {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .contain {

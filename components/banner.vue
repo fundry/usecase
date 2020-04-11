@@ -10,14 +10,14 @@
 
       <br />
       <br />
-      <h1>Simplistic Writing For Everyone</h1>
+      <h1>A Simplistic Writing Console For Everyone</h1>
 
       <p>Usecase is a Simplistic writing tool, built to improve the writing habit in individuals and organizations</p>
     </div>
 
     <!-- TABLET -->
     <div v-if="$mq === 'tablet'">
-      <h1>Simplistic Writing For Everyone</h1>
+      <h1>A Simplistic Writing Console For Everyone</h1>
 
       <p>Usecase is a Simplistic writing tool, built to improve the writing habit in individuals and organizations</p>
     </div>
@@ -32,7 +32,7 @@
           <br />
           <br />
           <br />
-          <h1>Simplistic Writing For Everyone</h1>
+          <h1>A Simplistic Writing Console For Everyone</h1>
 
           <p>Usecase is a Simplistic writing tool, built to improve the writing habit in individuals and organizations</p>
         </div>

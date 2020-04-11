@@ -2,7 +2,7 @@
   <div class="body">
     <br />
 
-    <h3>Write in bits, Compile and Publish</h3>
+    <h4>Write in bits, Compile and Publish</h4>
   </div>
 </template>
 
@@ -13,8 +13,9 @@ export default {
 </script>
 
 <style scoped lang="postcss" >
-h3 {
+h4 {
   text-align: center;
+  color: #361f94;
 }
 
 #body {
