@@ -66,14 +66,14 @@ export default {
     }
   }
   @media (--lg) {
-    padding: 1rem 4rem;
+    padding: 1rem 2rem;
     & p {
       font-size: 1.2rem;
       color: green;
     }
   }
   @media (--xl) {
-    padding: 1rem 7rem;
+    padding: 1rem 9rem;
     & p {
       font-size: 1.2rem;
       color: brown;

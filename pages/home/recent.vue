@@ -121,7 +121,7 @@ h5 {
 
 #body {
   padding: 0.5em;
-  background: #e5e5e5;
+  background:  aliceblue;
 }
 #org {
   cursor: pointer;

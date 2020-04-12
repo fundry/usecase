@@ -2,9 +2,10 @@
   <div class="body">
     <div>
       <br />
+
       <p>
         Leverage upon
-        <b>Usecases's console</b> to prepare and documents consistent bits of information for your organization bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+        <b>Usecases's console</b> to prepare and document consistent bits of information for your organization bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
       </p>
       <img src="../../../assets/svg/sample-console.svg" alt="sample console" />
       <br />
@@ -48,8 +49,11 @@ export default {
     text-align: center;
   }
   & p {
-    font-size: 1.2rem;
+    font-family: sans-serif;
+    font-size: 1.3rem;
+    text-align: center;
     padding: 0.5rem 1rem;
+    color: #1d3c6a;
   }
   & button {
     background: #361f94;
@@ -110,7 +114,7 @@ export default {
   @media (--lg) {
     & p {
       font-size: 1.4rem;
-      padding: 0.5rem 1rem;
+      padding: 0.5rem 3rem;
     }
     & img {
       height: auto;
@@ -129,8 +133,8 @@ export default {
   }
   @media (--xl) {
     & p {
-      font-size: 1.4rem;
-      padding: 0.5rem 6rem;
+      font-size: 1.5rem;
+      padding: 0.5rem 7rem;
     }
     & img {
       height: auto;

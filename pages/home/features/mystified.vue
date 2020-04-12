@@ -26,14 +26,18 @@ export default {
   & h3 {
     text-align: center;
     color: #361f94;
+    font-size: 1.7rem;
+    font-weight: 600;
   }
   & p {
     text-align: center;
-    padding: 0.5rem 2rem;
+    padding: 0.5rem 3rem;
+    color: #1d3c6a;
   }
   @media (--sm) {
     & p {
       font-size: 1.1rem;
+      padding: 0.5rem 3rem;
     }
     & h3 {
       font-size: 1.5rem;
@@ -42,6 +46,7 @@ export default {
   @media (--md) {
     & p {
       font-size: 1.3rem;
+      padding: 0.5rem 3rem;
     }
     & h3 {
       font-size: 1.6rem;
@@ -49,18 +54,20 @@ export default {
   }
   @media (--lg) {
     & p {
-      font-size: 1.3rem;
+      font-size: 1.4rem;
+      padding: 0.5rem 7rem;
     }
     & h3 {
-      font-size: 1.7rem;
+      font-size: 1.8rem;
     }
   }
   @media (--xl) {
     & p {
-      font-size: 1.3rem;
+      font-size: 1.5rem;
+      padding: 0.5rem 15rem;
     }
     & h3 {
-      font-size: 1.7rem;
+      font-size: 1.9rem;
     }
   }
 }

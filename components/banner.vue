@@ -71,6 +71,7 @@ export default {
   background: #f2f5ff;
   color: #1d2279;
   justify-content: center;
+  margin-left: 0rem;
   & h1 {
     font-weight: bolder;
     font-size: 2.5rem;
@@ -86,6 +87,8 @@ export default {
     align-self: auto;
   }
   @media (--sm) {
+    padding-left: 0rem;
+
     & h1 {
       font-weight: bolder;
       font-size: 2rem;
@@ -99,6 +102,7 @@ export default {
     }
   }
   @media (--md) {
+    padding-left: 0rem;
     & h1 {
       font-size: 2.3rem;
     }
@@ -111,6 +115,7 @@ export default {
     }
   }
   @media (--lg) {
+    padding-left: 0rem;
     & h1 {
       font-size: 2.5rem;
     }
@@ -123,6 +128,7 @@ export default {
     }
   }
   @media (--xl) {
+    padding-left: 7rem;
     & h1 {
       font-size: 3rem;
     }
