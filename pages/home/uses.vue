@@ -1,16 +1,25 @@
 <template >
   <div class="body">
-    <div v-if="$mq === 'mobile'" class="mobile-track">
+    <br />
+    <div v-if="$mq === 'mobile' || $mq === 'tablet' " class="mobile">
       <div>
         <h4>External Tooling Integration</h4>
-
+        <br />
+        <img alt="Point illustration" src="../../assets/svg/sample.svg" />
+        <br />
         <p>Integrate your usecase with your development tools and keep track of small contributions and write about them</p>
         <br />
         <p>Integrate your usecase with your development tools and keep track of small contributions and write about them</p>
       </div>
-      <img alt="Point illustration" src="../../assets/svg/sample.svg" />
 
       <br />
+      <img alt="Point illustration" src="../../assets/svg/folder.svg" />
+      <div>
+        <h4>A Something Written Archive</h4>
+        <p>Integrate your usecase with your development tools and keep track of small contributions and write about them</p>
+        <br />
+        <p>Integrate your usecase with your development tools and keep track of small contributions and write about them</p>
+      </div>
     </div>
 
     <div v-else>
@@ -27,6 +36,7 @@
         </div>
       </div>
 
+      <br />
       <br />
 
       <div class="archive">
@@ -53,13 +63,44 @@ export default {
 </script>
  
 <style scoped lang="postcss" >
-img {
-  max-width: 30rem;
+.mobile {
+  & p {
+    padding: 0.5rem 1rem;
+    line-height: 2.1rem;
+    color: #1d3c6a;
+  }
+  @media (--sm) {
+    & p {
+      padding: 0.5rem 2rem;
+      font-size: 1.1rem;
+    }
+  }
+  @media (--md) {
+    & p {
+      padding: 0.5rem 3rem;
+      font-size: 1.2rem;
+    }
+  }
+  @media (--lg) {
+    & p {
+      padding: 0.5rem 1rem;
+      font-size: 1.3rem;
+    }
+  }
+  @media (--xl) {
+    & p {
+      padding: 0.5rem 1rem;
+      font-size: 1.3rem;
+    }
+  }
 }
 
 .body {
   animation: 2s appear;
-
+  & h4 {
+    color: #361f94;
+    font-weight: medium;
+  }
   @keyframes appear {
     0% {
       opacity: 0;
@@ -104,8 +145,13 @@ img {
   }
   & p {
     text-align: left;
+    line-height: 2.3rem;
     width: 70%;
     color: #1d3c6a;
+  }
+  & img {
+    padding: 2rem 5rem;
+    height: auto;
   }
   @media (--sm) {
     & p {
@@ -116,6 +162,10 @@ img {
       font-size: 1.6rem;
       font-weight: semi-bold;
     }
+    & img {
+      padding: 2rem 5rem;
+      height: auto;
+    }
   }
   @media (--md) {
     & p {
@@ -124,6 +174,10 @@ img {
     & h3 {
       font-size: 1.7rem;
       font-weight: semi-bold;
+    }
+    & img {
+      padding: 2rem 5rem;
+      height: auto;
     }
   }
   @media (--lg) {
@@ -134,6 +188,10 @@ img {
       font-size: 1.8rem;
       font-weight: semi-bold;
     }
+    & img {
+      padding: 4rem 5rem;
+      height: 27vh;
+    }
   }
   @media (--xl) {
     & p {
@@ -142,6 +200,10 @@ img {
     & h3 {
       font-size: 1.9rem;
       font-weight: semi-bold;
+    }
+    & img {
+      padding: 2rem 15rem;
+      height: 37vh;
     }
   }
 }
@@ -162,6 +224,10 @@ img {
     margin-left: 23rem;
     color: #1d3c6a;
   }
+  & img {
+    padding: 4rem 6rem;
+    height: auto;
+  }
   @media (--sm) {
     & p {
       font-size: 1.1rem;
@@ -171,35 +237,51 @@ img {
       font-size: 1.6rem;
       font-weight: semi-bold;
     }
+    & img {
+      padding: 4rem 2rem;
+      height: auto;
+    }
   }
   @media (--md) {
     & p {
       font-size: 1.2rem;
-      margin-left: 5rem;
+      margin-left: 1rem;
     }
     & h3 {
       font-size: 1.7rem;
       font-weight: semi-bold;
     }
+    & img {
+      padding: 4rem 2rem;
+      height: auto;
+    }
   }
   @media (--lg) {
     & p {
       font-size: 1.3rem;
-      margin-left: 23rem;
+      margin-left: 10rem;
     }
     & h3 {
       font-size: 1.8rem;
       font-weight: semi-bold;
     }
+    & img {
+      padding: 4rem 4rem;
+      height: 37vh;
+    }
   }
   @media (--xl) {
     & p {
       font-size: 1.4rem;
-      margin-left: 27rem;
+      margin-left: 7rem;
     }
     & h3 {
       font-size: 1.9rem;
       font-weight: semi-bold;
+    }
+    & img {
+      padding: 4rem 17rem;
+      height: 45vh;
     }
   }
 }

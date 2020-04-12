@@ -49,7 +49,6 @@ export default {
     text-align: center;
   }
   & p {
-    font-family: sans-serif;
     font-size: 1.3rem;
     text-align: center;
     padding: 0.5rem 1rem;
@@ -70,6 +69,14 @@ export default {
     height: auto;
     width: 30rem;
     cursor: pointer;
+    @keyframes appear {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
   }
   @media (--sm) {
     & p {
@@ -78,7 +85,7 @@ export default {
     }
     & img {
       height: auto;
-      width: 30rem;
+      width: 22rem;
     }
     & button {
       background: #361f94;
@@ -88,7 +95,7 @@ export default {
       box-shadow: 0px 7px 7px #0b33a2;
       margin: 0 1em;
       font-size: 1.2rem;
-      padding: 0.6em 2.7em;
+      padding: 0.6em 1.5em;
     }
   }
   @media (--md) {
@@ -100,15 +107,6 @@ export default {
       height: auto;
       width: 35rem;
       animation: 2s appear;
-
-      @keyframes appear {
-        0% {
-          opacity: 0;
-        }
-        100% {
-          opacity: 1;
-        }
-      }
     }
     & button {
       background: #361f94;
@@ -123,7 +121,7 @@ export default {
   }
   @media (--lg) {
     & p {
-      font-size: 1.4rem;
+      font-size: 1.5rem;
       padding: 0.5rem 3rem;
     }
     & img {
@@ -143,8 +141,8 @@ export default {
   }
   @media (--xl) {
     & p {
-      font-size: 1.5rem;
-      padding: 0.5rem 7rem;
+      font-size: 1.7rem;
+      padding: 0.5rem 10rem;
     }
     & img {
       height: auto;

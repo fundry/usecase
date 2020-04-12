@@ -1,18 +1,20 @@
 <template >
   <div class="body">
     <div class="head">
-      <h5 v-if="searching === false">Recent Usecases</h5>
-      <h5 v-else>Searching :</h5>
+      <h4 v-if="searching === false">Recent Usecases</h4>
+      <h4 v-else>Searching :</h4>
 
-      <div id="input-box" v-if="$mq !== 'tablet' && $mq  !== 'mobile'  " @click="searching = true">
+      <div
+        id="input-box"
+        v-if="$mq !== 'tablet'  &&  $mq  !== 'mobile'  "
+        @click="searching = true"
+      >
         <BIconSearch id="icon" v-if="searching === false" />
         <BIconX id="icon" v-else @click="searching = false" />
 
         <input type="text" placeholder="Search Case" />
       </div>
-      <div v-else-if="$mq === 'mobile' ||  'tablet' ">
-        <BIconSearch id="icon" />
-      </div>
+      <BIconSearch id="icon" v-else />
     </div>
 
     <!-- mapping in Vuejs -->
@@ -104,15 +106,15 @@ export default {
   display: flex;
   justify-content: space-between;
   padding: 0.5em 0.3em;
-  & h5 {
-    padding-top: 10px;
+  & h4 {
+    padding-top: 5px;
     padding-left: 5px;
     color: #361f94;
   }
   & div {
     border: 1px solid #361f94;
     border-radius: 7px;
-    padding: 0.7em;
+    padding: 0.55em;
     width: 35em;
     height: auto;
   }
@@ -130,6 +132,7 @@ export default {
 
 #icon {
   cursor: pointer;
+  font-size: 1.8rem;
 }
 
 #loading {

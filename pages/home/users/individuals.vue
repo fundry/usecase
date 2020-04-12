@@ -75,6 +75,9 @@ export default {
     text-align: center;
     font-size: 1.4rem;
   }
+  & p {
+    text-align: center;
+  }
   @media (--sm) {
     display: grid;
     & p {
@@ -82,7 +85,7 @@ export default {
     }
     & h4 {
       text-align: center;
-      font-size: 1.4rem;
+      font-size: 1.3rem;
     }
   }
   @media (--md) {

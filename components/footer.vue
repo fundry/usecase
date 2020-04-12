@@ -1,7 +1,7 @@
 <template>
   <div>
     <hr />
-    <div id="create">
+    <div class="create">
       <p>Recently made a hard choice ?</p>
       <button>Document With UseCase</button>
     </div>
@@ -23,7 +23,7 @@
 
         <div id="mobile-sections">
           <div id="column">
-            <h5 id="title">DOCUMENTATION</h5>
+            <h5 id="title">PRODUCT</h5>
             <router-link to="/service/service">Resources</router-link>
             <a>Documentation</a>
             <a>Api</a>
@@ -69,7 +69,7 @@
         </div>
         <div>
           <div id="column">
-            <h5 id="title">DOCUMENTATION</h5>
+            <h5 id="title">PRODUCT</h5>
             <router-link to="/service/service">Resources</router-link>
             <a>Documentation</a>
             <a>Api</a>
@@ -117,6 +117,40 @@ export default {
 </script>
 
 <style scoped lang="postcss" >
+.create {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  padding: 5px 15px;
+  justify-content: space-between;
+  & button {
+    padding: 0.7rem 3rem;
+    border: 1px solid #000;
+  }
+  @media (--sm) {
+    display: grid;
+    padding: 5px 15px;
+    justify-content: space-between;
+  }
+  @media (--md) {
+    display: flex;
+    flex-direction: row;
+    padding: 5px 15px;
+    justify-content: space-between;
+  }
+  @media (--lg) {
+    display: flex;
+    flex-direction: row;
+    padding: 5px 15px;
+    justify-content: space-between;
+  }
+  @media (--xl) {
+    display: flex;
+    flex-direction: row;
+    padding: 5px 15px;
+    justify-content: space-between;
+  }
+}
 a {
   text-decoration: none;
 }
@@ -170,13 +204,6 @@ a {
   text-align: center;
   font-size: 0.77em;
   color: black;
-}
-
-#create {
-  display: flex;
-  flex-direction: row;
-  padding: 10px 15px;
-  justify-content: space-between;
 }
 
 #column {

@@ -11,11 +11,16 @@
         <h3>Publish</h3>
 
         <p>Publish your usecase without having to manually write about it.</p>
+        <div class="link">
+          <router-link to="/service/service">
+            <p class="link">Read More</p>
+          </router-link>
+        </div>
       </div>
       <br />
       <div class="contain">
         <div>
-          <img alt="illustration" src="../../../assets/svg/sample.svg" />
+          <img alt="illustration" src="../../../assets/svg/api.svg" />
         </div>
 
         <h3>Query</h3>
