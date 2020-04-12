@@ -11,7 +11,7 @@
         </div>
 
         <!-- BIGGER DISPLAYS -->
-        <div id="input-box" v-if="$mq !== 'tablet' && $mq  !== 'mobile'  ">
+        <div id="input-box" v-if="$mq !== 'tablet' && $mq  !== 'mobile' && page !== 'service' ">
           <div id="flex">
             <BIconSearch id="icon" v-if="searching === false" />
             <BIconX id="icon" v-else />
@@ -27,7 +27,7 @@
 
       <!-- BIGGER  VIEWS -->
       <div v-else>
-        <ul>
+        <ul v-if="page !== 'service'">
           <li>
             <router-link to="/usecases/cases" id="link">Cases</router-link>
           </li>
@@ -38,6 +38,14 @@
             <button>Create Account</button>
           </a>
         </ul>
+
+        <div id="input-box" v-else>
+          <div id="flex">
+            <BIconSearch id="icon" v-if="searching === false" />
+            <BIconX id="icon" v-else />
+            <input type="text" placeholder="Search Case" />
+          </div>
+        </div>
       </div>
     </nav>
   </header>
@@ -52,7 +60,7 @@ export default {
   data: () => {
     return { searching: false }
   },
-  props: ['owner', 'url']
+  props: ['owner', 'url', 'page']
 }
 </script>
 
@@ -92,7 +100,7 @@ input[type='text'] {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 0.2em 1em;
+  padding: 0.9em 1em;
   padding-top: 10px;
   box-shadow: 0px 3px 5px grey;
 }

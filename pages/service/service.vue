@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Header />
+    <Header page="service" />
     <div class="body">
       <Data />
     </div>

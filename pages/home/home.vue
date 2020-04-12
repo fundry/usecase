@@ -50,7 +50,6 @@ export default {
 <style scoped lang="postcss" >
 .body {
   padding: 0.5em;
-  color: black;
   & p {
     font-size: 2rem;
   }

@@ -20,6 +20,11 @@
 
         <h3>Query</h3>
         <p>Publish your usecase without having to manually write about it.</p>
+        <div class="link">
+          <router-link to="/service/service">
+            <p class="link">Read More</p>
+          </router-link>
+        </div>
       </div>
       <br />
     </div>
@@ -33,6 +38,11 @@
         <h3>Publish.</h3>
 
         <p>Publish your usecase without having to manually write about it.</p>
+        <div class="link">
+          <router-link to="/service/service">
+            <p class="link">Read More</p>
+          </router-link>
+        </div>
       </div>
 
       <div class="contain">
@@ -43,6 +53,12 @@
         <h3>Query</h3>
 
         <p>Publish your usecase without having to manually write about it .</p>
+
+        <div class="link">
+          <router-link to="/service/service">
+            <p class="link">Read More</p>
+          </router-link>
+        </div>
       </div>
     </div>
   </div>
@@ -61,6 +77,16 @@ export default {
 </script>
 
 <style scoped lang="postcss" >
+.link {
+  & p {
+    color: #361f94;
+    font-weight: bold;
+  }
+  & a {
+    text-decoration: none;
+  }
+}
+
 #img {
   text-align: center;
   max-width: 10rem;
