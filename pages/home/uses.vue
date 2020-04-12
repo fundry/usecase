@@ -15,7 +15,7 @@
       <br />
       <img alt="Point illustration" src="../../assets/svg/folder.svg" />
       <div>
-        <h4>A Something Written Archive</h4>
+        <h4>A Written Living Archive</h4>
         <p>Integrate your usecase with your development tools and keep track of small contributions and write about them</p>
         <br />
         <p>Integrate your usecase with your development tools and keep track of small contributions and write about them</p>
@@ -44,7 +44,7 @@
           <img alt="Point illustration" src="../../assets/svg/folder.svg" />
         </div>
         <div>
-          <h3>A Something Written Archive</h3>
+          <h3>A Written Living Archive</h3>
           <p>Integrate your usecase with your development tools and keep track of small contributions and write about them</p>
           <br />
           <p>Integrate your usecase with your development tools and keep track of small contributions and write about them</p>
