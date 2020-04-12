@@ -23,8 +23,8 @@
 
         <div id="mobile-sections">
           <div id="column">
-            <h5 id="title">PRODUCT</h5>
-            <a>Resources</a>
+            <h5 id="title">DOCUMENTATION</h5>
+            <router-link to="/service/service">Resources</router-link>
             <a>Documentation</a>
             <a>Api</a>
           </div>
@@ -69,8 +69,8 @@
         </div>
         <div>
           <div id="column">
-            <h5 id="title">PRODUCT</h5>
-            <a>Resources</a>
+            <h5 id="title">DOCUMENTATION</h5>
+            <router-link to="/service/service">Resources</router-link>
             <a>Documentation</a>
             <a>Api</a>
           </div>
@@ -117,6 +117,10 @@ export default {
 </script>
 
 <style scoped lang="postcss" >
+a {
+  text-decoration: none;
+}
+
 /* duplicate css will be replcaed by media queries later on  */
 #media-icons {
   font-size: 1.15em;

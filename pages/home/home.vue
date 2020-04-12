@@ -12,6 +12,7 @@
         <Recent />
         <Document />
         <Features />
+        <Privacy />
       </div>
     </div>
   </div>
@@ -26,7 +27,8 @@ import {
   Features,
   Mystified,
   Organization,
-  Individual
+  Individual,
+  Privacy
 } from './'
 
 export default {
@@ -39,6 +41,7 @@ export default {
     Document,
     Uses,
     Individual,
+    Privacy,
     Organization
   }
 }

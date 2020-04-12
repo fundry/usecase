@@ -1,12 +1,9 @@
 <template >
-  <div id="body">
-    <div id="head">
-      <div v-if="searching === false">
-        <h5>Recent Usecases</h5>
-      </div>
-      <div v-else>
-        <h5>Searching :</h5>
-      </div>
+  <div class="body">
+    <div class="head">
+      <h5 v-if="searching === false">Recent Usecases</h5>
+      <h5 v-else>Searching :</h5>
+
       <div id="input-box" v-if="$mq !== 'tablet' && $mq  !== 'mobile'  " @click="searching = true">
         <BIconSearch id="icon" v-if="searching === false" />
         <BIconX id="icon" v-else @click="searching = false" />
@@ -20,6 +17,8 @@
 
     <!-- mapping in Vuejs -->
     <div v-if="searching === false">
+      <Logo style="text-align : center" />
+
       <div v-bind:key="U.id" v-for="U in Usecases">
         <div id="box">
           <h6 id="org">{{U.author}}</h6>
@@ -56,6 +55,7 @@ import {
 } from 'bootstrap-vue'
 import { gql } from 'apollo-boost'
 import { ALL_USECASES } from '../../data/queries'
+import Logo from '../../components/Logo.vue'
 
 new Vue({
   apollo: {
@@ -84,6 +84,7 @@ export default {
 
   components: {
     BIconSearch,
+    Logo,
     BIconX,
     BIconArrowRepeat,
     BIconBook,
@@ -92,7 +93,41 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="postcss" >
+.body {
+  padding: 0.5em;
+  background: aliceblue;
+  height: 40vh;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5em 0.3em;
+  & h5 {
+    padding-top: 10px;
+    padding-left: 5px;
+    color: #361f94;
+  }
+  & div {
+    border: 1px solid #361f94;
+    border-radius: 7px;
+    padding: 0.7em;
+    width: 35em;
+    height: auto;
+  }
+  & input[type='text'] {
+    padding: 0.5em;
+    border: none;
+    background: transparent;
+    height: auto;
+    outline: 0px;
+    width: 30em;
+    border-radius: 0px;
+    padding-left: 15px;
+  }
+}
+
 #icon {
   cursor: pointer;
 }
@@ -106,32 +141,10 @@ export default {
   font-size: 2.5rem;
 }
 
-#input-box {
-  border: 1px solid black;
-  border-radius: 10px;
-  padding: 0.3em;
-  width: 25em;
-  height: auto;
-}
-
-h5 {
-  padding-top: 7px;
-  padding-left: 10px;
-}
-
-#body {
-  padding: 0.5em;
-  background:  aliceblue;
-}
 #org {
   cursor: pointer;
   font-weight: bold;
   font-size: 1.2em;
-}
-#head {
-  display: flex;
-  justify-content: space-between;
-  padding: 0.5em 1em;
 }
 
 #title {
@@ -152,16 +165,5 @@ h5 {
 #stats {
   display: flex;
   justify-content: space-evenly;
-}
-
-input[type='text'] {
-  padding: 0.5em;
-  border: none;
-  background: transparent;
-  height: auto;
-  outline: 0px;
-  width: 21em;
-  border-radius: 0px;
-  padding-left: 15px;
 }
 </style>

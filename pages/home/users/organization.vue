@@ -98,7 +98,17 @@ export default {
     }
     & img {
       height: auto;
-      width: 30rem;
+      width: 35rem;
+      animation: 2s appear;
+
+      @keyframes appear {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
     }
     & button {
       background: #361f94;

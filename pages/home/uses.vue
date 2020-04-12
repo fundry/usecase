@@ -58,6 +58,16 @@ img {
 }
 
 .body {
+  animation: 2s appear;
+
+  @keyframes appear {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
   padding: 1rem;
   text-align: center;
   @media (--sm) {

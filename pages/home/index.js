@@ -2,6 +2,7 @@ export { default as Recent } from './recent.vue';
 export { default as Uses } from './uses.vue';
 export { default as Document } from './document.vue';
 export { default as Features } from './features/features.vue';
+export { default as Privacy } from './features/privacy.vue';
 export { default as Mystified } from './features/mystified.vue';
 export { default as Organization } from './users/organization.vue';
 export { default as Individual } from './users/individuals.vue';

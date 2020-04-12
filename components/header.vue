@@ -1,44 +1,46 @@
 <template>
-  <div class="body" id="contain">
-    <div id="flex">
+  <header>
+    <nav class="body" id="contain">
       <div id="flex">
-        <h3 id="title">
-          <nuxt-link to="/">Usecase</nuxt-link>
-        </h3>
-
-        <h5 id="own">| {{owner}}</h5>
-      </div>
-
-      <!-- BIGGER DISPLAYS -->
-      <div id="input-box" v-if="$mq !== 'tablet' && $mq  !== 'mobile'  ">
         <div id="flex">
-          <BIconSearch id="icon" v-if="searching === false" />
-          <BIconX id="icon" v-else />
-          <input type="text" placeholder="Search Case" />
+          <h3 id="title">
+            <nuxt-link to="/">Usecase</nuxt-link>
+          </h3>
+
+          <h5 id="own">| {{owner}}</h5>
+        </div>
+
+        <!-- BIGGER DISPLAYS -->
+        <div id="input-box" v-if="$mq !== 'tablet' && $mq  !== 'mobile'  ">
+          <div id="flex">
+            <BIconSearch id="icon" v-if="searching === false" />
+            <BIconX id="icon" v-else />
+            <input type="text" placeholder="Search Case" />
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- MOBILE VIEW -->
-    <div v-if="$mq === 'mobile'">
-      <BIconList font-scale="2" id="icon" />
-    </div>
+      <!-- MOBILE VIEW -->
+      <div v-if="$mq === 'mobile'">
+        <BIconList font-scale="2" id="icon" />
+      </div>
 
-    <!-- BIGGER  VIEWS -->
-    <div v-else>
-      <ul>
-        <li>
-          <router-link to="/usecases/cases" id="link">Cases</router-link>
-        </li>
-        <li>
-          <router-link to="/login" id="link">Login</router-link>
-        </li>
-        <a href="https://app-usecase.netlify.com">
-          <button>Create Account</button>
-        </a>
-      </ul>
-    </div>
-  </div>
+      <!-- BIGGER  VIEWS -->
+      <div v-else>
+        <ul>
+          <li>
+            <router-link to="/usecases/cases" id="link">Cases</router-link>
+          </li>
+          <li>
+            <router-link to="/login" id="link">Login</router-link>
+          </li>
+          <a href="https://app-usecase.netlify.com" _about>
+            <button>Create Account</button>
+          </a>
+        </ul>
+      </div>
+    </nav>
+  </header>
 </template>
 
 <script lang="ts" >

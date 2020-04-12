@@ -6,7 +6,9 @@ export default {
   /*
   ** Headers of the page
   */
-  head: {
+  head: { htmlAttrs: {
+      lang: 'en'
+    },
     title: process.env.npm_package_name || '',
     meta: [
       { charset: 'utf-8' },
@@ -35,9 +37,7 @@ export default {
   ** Nuxt.js dev-modules
   */
   buildModules: [],
-  /*
-  ** Nuxt.js modules
-  */
+ 
   modules: [
     // Doc: https://bootstrap-vue.js.org
     'bootstrap-vue/nuxt',
