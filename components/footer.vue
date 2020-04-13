@@ -121,6 +121,8 @@ export default {
   display: flex;
   flex-direction: row;
   text-align: center;
+  align-content: center;
+  align-items: center;
   padding: 5px 15px;
   justify-content: space-between;
   & button {
