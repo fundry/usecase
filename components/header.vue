@@ -22,7 +22,7 @@
 
       <!-- MOBILE VIEW -->
       <div v-if="$mq === 'mobile'">
-        <BIconList font-scale="2" id="icon" />
+        <BIconList font-scale="2.5" id="icon" />
       </div>
 
       <!-- BIGGER  VIEWS -->
@@ -72,7 +72,7 @@ export default {
 
 #icon {
   padding-top: 10px;
-  font-size: 2.1rem;
+  font-size: 2.3rem;
 }
 
 input[type='text'] {
@@ -100,7 +100,7 @@ input[type='text'] {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 0.9em 1em;
+  padding: 0.8em 1em;
   padding-top: 10px;
   box-shadow: 0px 3px 5px grey;
 }

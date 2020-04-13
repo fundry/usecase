@@ -1,13 +1,20 @@
 <template>
   <div class="body">
-    <div>
-      <br />
+    <br />
 
-      <p>
-        Leverage upon
-        <b>Usecases's console</b> to prepare and document consistent bits of information for your organization bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-      </p>
+    <p>
+      Leverage upon
+      <b>Usecases's console</b> to prepare and document consistent bits of information for your organization bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+    </p>
+    <br />
+    <h2>
+      Try Usecases using the guest mode.
+      <br />No Authentication required !
+    </h2>
+    <br />
+    <div>
       <img src="../../../assets/svg/sample-console.svg" alt="sample console" />
+      <br />
       <br />
 
       <button>
@@ -45,6 +52,12 @@ export default {
 
 .body {
   padding: 1rem;
+  & h2 {
+    font-weight: lighter;
+    color: #361f94;
+    font-size: 2.3rem;
+    padding-left: 35px;
+  }
   & div {
     text-align: center;
   }
@@ -87,26 +100,34 @@ export default {
       height: auto;
       width: 22rem;
     }
+    & h2 {
+      font-size: 1.5rem;
+      padding-left: 10px;
+    }
     & button {
       background: #361f94;
       border: 1px solid #0e2f5a;
       border-radius: 10px;
       color: #fff;
-      box-shadow: 0px 7px 7px #0b33a2;
+      box-shadow: 0px 6px 6px #0b33a2;
       margin: 0 1em;
-      font-size: 1.2rem;
-      padding: 0.6em 1.5em;
+      font-size: 1rem;
+      padding: 0.6em 1em;
     }
   }
   @media (--md) {
     & p {
-      font-size: 1.2rem;
-      padding: 0.5rem 1rem;
+      font-size: 1.5rem;
+      padding: 0.5rem 2rem;
     }
     & img {
       height: auto;
       width: 35rem;
       animation: 2s appear;
+    }
+    & h2 {
+      font-size: 2rem;
+      padding-left: 35px;
     }
     & button {
       background: #361f94;
@@ -128,6 +149,10 @@ export default {
       height: auto;
       width: 50rem;
     }
+    & h2 {
+      font-size: 2.4rem;
+      padding-left: 35px;
+    }
     & button {
       background: #361f94;
       border: 1px solid #0e2f5a;
@@ -147,6 +172,10 @@ export default {
     & img {
       height: auto;
       width: 65rem;
+    }
+    & h2 {
+      font-size: 3rem;
+      padding-left: 35px;
     }
     & button {
       background: #361f94;
